@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" class="h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Check My Wallet</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="h-full">
+    <main class="flex justify-center">
+      <div>
+        <div id="input-div">
+          <!-- Wallet tested with Non-Fungible People: 0x827df9e9f73aa2035b7a6abc1ec44b56801791ce (9)-->
+          <!-- Wallet tested with Champion NFT:        0x48c87e758a72b519523a314221d5276d9787f81c (1)-->
+          <!-- Wallet tested with NFPets:              0xba9941758893819c506b79906a02ebdaac0e337c (3)-->
+          <!-- Wallet tested with NFPets - Sparky:     0xdb9c3b165f1f6d12c91d13fa9956a2cb40adea64 (1)-->
+          <!-- Wallet tested with Daz3D:               0x827df9e9f73aa2035b7a6abc1ec44b56801791ce (5)-->
+          <input
+            type="text"
+            id="wallet_address"
+            autofocus
+            autocomplete="off"
+            value=""
+            placeholder="Wallet address"
+            class="border rounded-md"
+          />
+          <label for="projects">Choose a project:</label>
+
+          <select class="border rounded-md" name="projects" id="project">
+            <option value="Daz3D">Daz3D - Images will load</option>
+            <option value="Non-Fungible People">Non-Fungible People</option>
+            <option value="Champion X NFP">Champion X NFP</option>
+            <option value="NFPets">NFPets</option>
+            <option value="NFPets - Sparky">NFPets - Sparky</option>
+          </select>
+
+          <button id="load_button" class="border rounded-md">
+            SHOW MY NFT'S
+          </button>
+        </div>
+
+        <div id="nfts" class="flex gap flex-wrap"></div>
+      </div>
+    </main>
+
+    <template id="nft_template">
+      <section>
+        <div>
+          <h1></h1>
+          <a href="" target="_blank">
+            <img class="width" src="" alt="" />
+          </a>
+        </div>
+      </section>
+    </template>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.7.0-rc.0/web3.min.js"></script>
+
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
